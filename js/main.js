@@ -3,7 +3,7 @@ $(document).ready(function() {
         //Navigation
         menu: '#menu',
         lockAnchors: false,
-        anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
         navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
@@ -37,8 +37,8 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        resize : false,
-        sectionsColor : ['#ccc', '#fff'],
+        resize: false,
+        sectionsColor: ['#ccc', '#fff'],
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
         responsiveWidth: 0,
@@ -49,11 +49,27 @@ $(document).ready(function() {
         slideSelector: '.slide',
 
         //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        onLeave: function(index, nextIndex, direction) {
+            if (nextIndex === 1) {
+                $('a').attr('style', 'color:white !important');
+            } else {
+                $('a').attr('style', 'color:black !important');
+            }
+        },
+        afterLoad: function(anchorLink, index) {},
+        afterRender: function() {},
+        afterResize: function() {},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
     });
+});
+
+$('.navbar-toggle').on('click', function() {
+    if ($(this).hasClass('collapsed')) {
+        $('nav').removeClass('navbar-custom');
+        $('a').removeClass('navbar-text');
+    } else {
+        $('nav').addClass('navbar-custom');
+        $('a').addClass('navbar-text');
+    }
 });

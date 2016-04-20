@@ -6,8 +6,13 @@ body {
 
 /* Navbar */
 
+.navbar-text {
+    color: white !important;
+}
+.navbar-header {
+    padding: 0 auto !important;
+}
 .navbar-custom {
-    margin-top: 500px auto;
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
     box-shadow: 0px 0px;
@@ -25,14 +30,14 @@ body {
     background-position: center;
     background-size: cover;
 }
-.title-box {
-    margin-top: 50vh;
-}
 #title {
     color: #f2f2f3;
     text-align: center;
     font-size: 4em;
     font-weight: bolder;
+}
+.title-box {
+    margin-top: 50vh;
 }
 
 /* About page */
@@ -47,7 +52,6 @@ body {
     text-align: center;
 }
 .about-wrapper {
-    font-size: 80%;
     margin: 10vh auto;
 }
 .image-container {
@@ -66,7 +70,6 @@ body {
     margin-top: -100px;
 }
 
-
 /* Override default fullpage.js styling & style active class */
 
 .fp-next {
@@ -75,10 +78,13 @@ body {
 .fp-prev {
     border-color: transparent black transparent transparent !important;
 }
+
+/*
+
 .navbar-default .navbar-nav > .active > a {
     border: 1px solid black;
-    border-bottom-left-radius: 50px !important;
-    border-bottom-right-radius: 50px !important;
-    border-top: none;
+    border-radius: 100%;
     background: none !important;
 }
+
+*/
