@@ -9,8 +9,14 @@ body {
 .navbar-text {
     color: white !important;
 }
-.navbar-header {
-    padding: 0 auto !important;
+.navbar-brand-header {
+    color: white !important;
+    margin-top: 15px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar-brand-header {
+        margin-top: 0px;
+    }
 }
 .navbar-custom {
     border-width: 0px;
@@ -73,19 +79,17 @@ body {
 /* Contact */
 
 #form-header {
-    text-align:center;
+    text-align: center;
 }
-
 #form-contact-info {
-    text-align:center;
+    text-align: center;
 }
-
 .fa {
     font-size: 5vh !important;
     margin: 1vh;
 }
 
-/* Override default fullpage.js styling & style active class */
+/* Override default fullpage.js arrow colour */
 
 .fp-next {
     border-color: transparent transparent transparent black !important;
@@ -94,12 +98,11 @@ body {
     border-color: transparent black transparent transparent !important;
 }
 
-/*
+/* Styles for form validation */
 
-.navbar-default .navbar-nav > .active > a {
-    border: 1px solid black;
-    border-radius: 100%;
-    background: none !important;
+input:focus:invalid, textarea:focus:invalid {
+    border: 2px solid red;
 }
-
-*/
+input:focus:valid, textarea:focus:valid {
+    border: 2px solid #00FF51;
+}
