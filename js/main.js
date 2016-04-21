@@ -1,7 +1,15 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
+        //Navigation
         menu: '#menu',
-        anchors: ['', '', '', ''],
+        lockAnchors: false,
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        navigation: false,
+        navigationPosition: 'right',
+        navigationTooltips: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+        showActiveTooltip: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
 
         onLeave: function(index, nextIndex, direction) {
             if (nextIndex === 1) {
