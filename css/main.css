@@ -2,18 +2,25 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    color: #333333;
 }
 
 /* Navbar */
 
-.navbar-text {
-    color: white !important;
+nav {
+    animation-duration: 250ms !important;
+}
+.collapsed {
+    border: 2px solid #eb586f !important;
+    border-radius: 5px !important;
+}
+.navbar-text-copy {
+    color: #eeeeee !important;
 }
 .navbar-brand-header {
-    color: white !important;
-    margin-top: 15px;
+    color: #eeeeee !important;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .navbar-brand-header {
         margin-top: 0px;
     }
@@ -27,17 +34,25 @@ body {
     background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%);
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%);
 }
+.navbar-default .navbar-nav > .active > a {
+    border-bottom: 4px solid #eb586f;
+    border-radius: 100%;
+    padding-bottom: 5px;
+    border-top: none;
+    box-shadow: none;
+    background: none !important;
+}
 
 /* Hero page */
 
 #hero {
     height: 100vh;
-    background-image: url(../img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../img/hero.jpg);
     background-position: center;
     background-size: cover;
 }
 #title {
-    color: #f2f2f3;
+    color: #eeeeee;
     text-align: center;
     font-size: 4em;
     font-weight: bolder;
@@ -54,11 +69,18 @@ body {
 #about-text {
     text-align: center;
 }
+.image-container figure {
+    margin: 25px 0 10px 0;
+}
 .fig-logo {
     text-align: center;
 }
+.fig-logo span {
+    border-bottom: 2px solid #eb586f;
+    padding-bottom: 5px;
+}
 .about-wrapper {
-    margin: 10vh auto;
+    margin: 5vh auto;
 }
 .image-container {
     margin-top: 5vh;
@@ -70,12 +92,29 @@ body {
     text-align: center;
     background-color: #f2f2f3;
 }
-
+.project-text > h4 strong {
+    border-bottom: 2px solid #eb586f;
+    padding-bottom: 5px;
+}
+.project-text > p {
+    padding-top: 5px;
+}
+.project-text {
+    height: 10px !important;
+}
+@media only screen and (min-width: 768px) {
+    .project-text {
+        margin: 5em auto;
+    }
+}
 
 /* Contact */
 
 #form-header {
     text-align: center;
+}
+#form-header-span {
+    border-bottom: 2px solid #eb586f;
 }
 #form-contact-info {
     text-align: center;
@@ -84,25 +123,35 @@ body {
     font-size: 5vh !important;
     margin: 1vh;
 }
+.btn-secondary {
+    border: 2px solid #eb586f;
+    border-radius: 5px;
+}
+.well {
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.75);
+}
 @media only screen and (max-width: 768px) {
     .email-wrapper {
-        height:100vh !important;
+        height: 100vh !important;
     }
 }
+
 /* Override default fullpage.js arrow colour */
 
 .fp-next {
-    border-color: transparent transparent transparent black !important;
+    border-color: transparent transparent transparent #454553 !important;
 }
 .fp-prev {
-    border-color: transparent black transparent transparent !important;
+    border-color: transparent #454553 transparent transparent !important;
 }
 
 /* Styles for form validation */
 
 input:focus:invalid, textarea:focus:invalid {
-    border: 2px solid red;
+    border: 2px solid rgba(255, 0, 0, 0.5);
 }
 input:focus:valid, textarea:focus:valid {
-    border: 2px solid #00FF51;
+    border: 2px solid rgba(0, 255, 0, 0.5);
 }

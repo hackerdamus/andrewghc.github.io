@@ -48,7 +48,7 @@ var Projects = React.createClass({
                             },
                             React.createElement(
                                 "div", {
-                                    className: "col-xs-6"
+                                    className: "col-xs-6 col-lg-4 col-lg-offset-1"
                                 },
                                 React.createElement(
                                     "a", {
@@ -64,7 +64,7 @@ var Projects = React.createClass({
                             ),
                             React.createElement(
                                 "div", {
-                                    className: "col-xs-6"
+                                    className: "col-xs-6 col-lg-4 col-lg-offset-2"
                                 },
                                 React.createElement(
                                     "a", {
